@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+
 import './header.styles.scss';
 
 import { auth } from '../../firebase/firebase.utils';
@@ -22,7 +24,7 @@ const Header = ({ currentUser }) => (
           SIGN OUT
         </div>
       ) : (
-        <Link classNAme='option' to='/signin'>
+        <Link className='option' to='/signin'>
           SIGN IN
         </Link>
       )}
@@ -30,4 +32,8 @@ const Header = ({ currentUser }) => (
   </div>
 );
 
-export default Header;
+const mapStateToProps = (state) => ({
+  currentUser: state.user.currentUser,
+});
+
+export default connect(mapStateToProps)(Header);
