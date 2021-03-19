@@ -1,5 +1,4 @@
-import CollectionItem from '../../collection-item/collection-item.component';
-
+import CollectionItem from '../collection-item/collection-item.component';
 import './collection-preview.style.scss';
 
 const CollectionPreview = ({ title, items }) => (
