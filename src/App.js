@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import { Route, Switch, Redirect } from 'react-router';
 import { connect } from 'react-redux';
@@ -65,8 +66,6 @@ class App extends Component {
       </div>
     );
   }
-}
-
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
 });
